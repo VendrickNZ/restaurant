@@ -1,3 +1,4 @@
+import loadHome from "./home";
 function createHeader() {
     const header = document.createElement("header");
     header.classList.add("header");
@@ -61,28 +62,9 @@ function setActiveBtn(button) {
 
 
 function createMain() {    
-    const videoURL = '../dist/videos/MrKrabsLong.mp4'
     const main = document.createElement("main");
-    const quoteText = document.createElement("p");
-    const whyComeText = document.createElement("p");
-    const moneyVideo = document.createElement("video");
-    quoteText.innerText = '"The Krusty Krab! Come spend your money here!"';
-    whyComeText.innerText = 'One might ask, why should I come to the Krusty Krab 2 and not other fine establishments? To that I say, allow our CEO Eugene H. Krabs to explain to you why.';
-    quoteText.classList.add("quote")
-    moneyVideo.id = "video";
-    moneyVideo.width = 640;
-    moneyVideo.height = 320;
-    moneyVideo.src = videoURL;
-    moneyVideo.controls = true;
-
-    // moneyVideo.addEventListener('click', () => {
-    //     ((moneyVideo.currentTime > 0) && (moneyVideo.paused == false)) ? moneyVideo.pause() : moneyVideo.play();
-    // })
     main.classList.add("main");
     main.setAttribute("id", "main");
-    main.appendChild(quoteText);
-    main.appendChild(whyComeText);
-    main.appendChild(moneyVideo);
     return main;
 }
 
@@ -90,19 +72,12 @@ function createFooter() {
     const footer = document.createElement("footer");
     footer.classList.add("footer");
 
-    const githubProfileLink = document.createElement("a");
-    const githubProfile = document.createElement("text");
-
-    const githubLogo = document.createElement("i");
-    githubLogo.classList.add("fab");
-    githubLogo.classList.add("fa-github");
-
+    const githubProfile = document.createElement("a");
     githubProfile.textContent = "VendrickNZ"
-    githubProfileLink.href = "https://github.com/VendrickNZ";
+    githubProfile.href = "https://github.com/VendrickNZ"
+    githubProfile.classList.add("profileLink");
+
     footer.appendChild(githubProfile);
-    githubProfileLink.appendChild(githubLogo);
-    
-    footer.appendChild(githubProfileLink);
 
     return footer;
 }
@@ -113,6 +88,9 @@ function initializeWebsite() {
     container.appendChild(createHeader());
     container.appendChild(createMain());
     container.appendChild(createFooter());
+
+    setActiveBtn(document.querySelector(".navBtn"));
+    loadHome();
 }
 
 export default initializeWebsite;

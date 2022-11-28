@@ -61,14 +61,14 @@ function setActiveBtn(button) {
 
 
 function createMain() {    
-    console.log('hi');
     const videoURL = '../dist/videos/MrKrabsLong.mp4'
     const main = document.createElement("main");
     const quoteText = document.createElement("p");
     const whyComeText = document.createElement("p");
     const moneyVideo = document.createElement("video");
-    quoteText.innerText = 'The Krusty Krab! Come spend your money here!';
+    quoteText.innerText = '"The Krusty Krab! Come spend your money here!"';
     whyComeText.innerText = 'One might ask, why should I come to the Krusty Krab 2 and not other fine establishments? To that I say, allow our CEO Eugene H. Krabs to explain to you why.';
+    quoteText.classList.add("quote")
     moneyVideo.id = "video";
     moneyVideo.width = 640;
     moneyVideo.height = 320;
@@ -90,22 +90,19 @@ function createFooter() {
     const footer = document.createElement("footer");
     footer.classList.add("footer");
 
-    const repoLink = document.createElement("a");
     const githubProfileLink = document.createElement("a");
     const githubProfile = document.createElement("text");
-    const repo = document.createElement("text");
 
-    githubProfile.textContent = "VendrickNZ |"
-    repo.textContent = "| restaurant repository"
+    const githubLogo = document.createElement("i");
+    githubLogo.classList.add("fab");
+    githubLogo.classList.add("fa-github");
 
+    githubProfile.textContent = "VendrickNZ"
     githubProfileLink.href = "https://github.com/VendrickNZ";
-    repoLink.href = "https://github.com/VendrickNZ/restaurant";
-
-    repoLink.appendChild(repo);
-    githubProfileLink.appendChild(githubProfile);
-
+    footer.appendChild(githubProfile);
+    githubProfileLink.appendChild(githubLogo);
+    
     footer.appendChild(githubProfileLink);
-    footer.appendChild(repoLink);
 
     return footer;
 }

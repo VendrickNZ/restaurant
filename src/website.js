@@ -79,7 +79,12 @@ function createFooter() {
     githubProfile.href = "https://github.com/VendrickNZ"
     githubProfile.classList.add("profileLink");
 
+    const githubIcon = document.createElement("i");
+    githubIcon.classList.add("fa");
+    githubIcon.classList.add("fa-github");
+    githubIcon.style = "font-size:30px;color:#4e0ba1";
     footer.appendChild(githubProfile);
+    footer.appendChild(githubIcon);
 
     return footer;
 }

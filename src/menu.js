@@ -4,7 +4,7 @@ function createMenu() {
 
     const menuImage = document.createElement('img');
     menuImage.src = "../dist/images/menu.webp";
-    menuImage.height = 1000;
+    menuImage.height = 800;
     menuImage.width = 700;
     menu.appendChild(menuImage);
 

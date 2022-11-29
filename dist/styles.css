@@ -1,0 +1,119 @@
+@font-face {
+    font-family: spongebobFont;
+    src: url(static/fonts/spongeboyregular.otf);
+}
+
+html {
+    /* footer support */
+    position: relative;
+    min-height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: spongebobFont;
+}
+
+.navBtn {
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    transition: transform 0.3s;
+    font-family: 'Slackey', cursive;
+    border: yellow;
+}
+
+.navBtn.active {
+    border-bottom: 2px solid blue;
+}
+
+.navBtn:hover {
+    transform: translateY(-10%);
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.visitUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.mrKrabsText {
+    margin-left: 1200px;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #6ad9a3;
+
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+}
+
+.footer {
+    background-color: #ed3c2f;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: var(--spacing-sm);
+    height: 50px;
+    gap: 10px;
+}
+
+.profileLink {
+    font-family: spongebobFont;
+}
+
+
+.fa-github:hover {
+    color: var(--font-color-dark);
+}
+
+
+body {
+    background-color: yellow;
+}
+
+.restaurantName {
+    color: red;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+}
+
+.quote {
+    font-style: italic;
+}
+p {
+    font-family: 'Merriweather', serif;
+}
+
+.mrKrabsText {
+    font-family: 'Parisienne', cursive;
+    font-size: 30px;
+}

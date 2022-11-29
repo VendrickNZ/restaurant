@@ -3,7 +3,7 @@ function createMenu() {
     menu.classList.add("menu");
 
     const menuImage = document.createElement('img');
-    menuImage.src = "../dist/images/menu.webp";
+    menuImage.src = "/images/menu.webp";
     menuImage.height = 800;
     menuImage.width = 700;
     menu.appendChild(menuImage);

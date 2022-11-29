@@ -1,4 +1,7 @@
 import loadHome from "./home";
+import loadMenu from "./menu";
+import loadContact from "./contact";
+
 function createHeader() {
     const header = document.createElement("header");
     header.classList.add("header");
@@ -49,8 +52,7 @@ function createNavBar() {
 }
 
 function setActiveBtn(button) {
-    const buttons = document.querySelectorAll('navBtn');
-
+    const buttons = document.querySelectorAll('.navBtn');
     buttons.forEach((button) => {
         if (button !== this) {
             button.classList.remove("active");

@@ -13,7 +13,7 @@ function createContact() {
     contactText.classList = "contactText";
 
     const contactRestaurantImage = document.createElement("img");
-    contactRestaurantImage.src = "/src/static/images/krustykrab2.webp";
+    contactRestaurantImage.src = "./static/images/krustykrab2.webp";
     contactRestaurantImage.height = 650
     contactRestaurantImage.width = 850
 
@@ -22,12 +22,12 @@ function createContact() {
     mrKrabsText.classList = "mrKrabsText";
 
     const mrKrabsImage = document.createElement("img");
-    mrKrabsImage.src = "/src/static/images/mrkrabs.webp";
+    mrKrabsImage.src = "./static/images/mrkrabs.webp";
     mrKrabsImage.height = 650;
     mrKrabsImage.width = 850;
 
     const mrKrabsIcon = document.createElement('img');
-    mrKrabsIcon.src = "/src/static/images/krustykrabicon.png";
+    mrKrabsIcon.src = "./static/images/krustykrabicon.png";
     mrKrabsIcon.height = 20;
     mrKrabsIcon.width = 40;
 

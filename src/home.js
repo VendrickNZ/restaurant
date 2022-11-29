@@ -2,7 +2,7 @@ function createHome() {
     const home = document.createElement("div");
     home.classList.add("home");
 
-    const videoURL = '/videos/MrKrabsLong.mp4'
+    const videoURL = '/src/videos/MrKrabsLong.mp4'
     const quoteText = document.createElement("p");
     const whyComeText = document.createElement("p");
     const moneyVideo = document.createElement("video");
